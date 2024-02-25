@@ -1,32 +1,27 @@
-class pengguna {
-    private String username;
-    private String password;
+public class Segitiga<N> {
+    private N alas;
+    private N tinggi;
 
-    public pengguna(String username, String password) {
+    public Segitiga(N alas, N tinggi) {
+        this.alas = alas;
+        this.tinggi = tinggi;
     }
 
-    public void User(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public N getAlas(){
+        return alas;
     }
 
-    public String getUsername() {
-        return username;
+    public N getTinggi(){
+        return tinggi;
     }
 
-    public String getPassword() {
-        return password;
+    public int getResultAsInt() {
+        int result =  (Integer)getTinggi() * (Integer)getAlas() / 2;
+        return result;
     }
 
-    public boolean isAdmin() {
-        return false;
-    }
-
-    public boolean isStudent() {
-        return false;
-    }
-
-    public Object getNim() {
-        return false;
+    public double getResultAsDouble() {
+        double result = (Double)getTinggi() * (Double)getAlas() / 2;
+        return result;
     }
 }
